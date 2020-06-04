@@ -5,9 +5,8 @@ let ObjectId = Schema.Types.ObjectId;
 const Log = new Schema(
   {
     food_name: { type: String, required: true },
-    serving_quantity: { type: Number, required: true },
+    serving_qty: { type: Number, required: true },
     nf_calories: { type: Number, required: true },
-    description: { type: String, required: true },
     creatorEmail: { type: String, required: true },
     day: { type: ObjectId, ref: "day", required: true },
   },

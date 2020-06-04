@@ -4,7 +4,7 @@ import { BadRequest, UnAuthorized } from "../utils/Errors";
 class DaysService {
 
   async find(query = {}) {
-    let data = await dbContext.Day.find(query).populate(
+    return await dbContext.Day.find(query).populate(
       "creator",
       "name picture"
     )
